@@ -75,14 +75,13 @@ namespace {
         }
 
         D3DPRESENT_PARAMETERS d3dpp = {};
-        d3dpp.BackBufferWidth = 0;
-        d3dpp.BackBufferHeight = 0;
+        d3dpp.BackBufferWidth = 4;
+        d3dpp.BackBufferHeight = 4;
         d3dpp.BackBufferFormat = D3DFMT_X8R8G8B8;
         d3dpp.BackBufferCount = 1;
         d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
+        d3dpp.hDeviceWindow = hWnd;
         d3dpp.Windowed = TRUE;
-        d3dpp.EnableAutoDepthStencil = TRUE;
-        d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
         HRESULT hr = g_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd,
             D3DCREATE_SOFTWARE_VERTEXPROCESSING, &d3dpp, &g_pd3dDevice);
