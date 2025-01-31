@@ -66,11 +66,8 @@
     <ClInclude Include="src\hooks\backend\vulkan\hook_vulkan.hpp" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_dx8.h" />
     <ClInclude Include="src\hooks\backend\dx8\hook_directx8.hpp" />
-    <ClInclude Include="src\dependencies\detours\detours.h" />
-    <ClInclude Include="src\dependencies\detours\detver.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="src\dependencies\DirectX8\Lib\d3d8.lib" />
-    <Library Include="src\dependencies\detours\detours.lib" />
   </ItemGroup>
 </Project>

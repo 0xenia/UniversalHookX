@@ -221,8 +221,6 @@
   <ItemGroup>
     <ClInclude Include="src\backend.hpp" />
     <ClInclude Include="src\console\console.hpp" />
-    <ClInclude Include="src\dependencies\detours\detours.h" />
-    <ClInclude Include="src\dependencies\detours\detver.h" />
     <ClInclude Include="src\dependencies\imgui\imconfig.h" />
     <ClInclude Include="src\dependencies\imgui\imgui.h" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_dx10.h" />
@@ -262,7 +260,6 @@
     <ClInclude Include="src\utils\utils.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="src\dependencies\detours\detours.lib" />
     <Library Include="src\dependencies\DirectX8\Lib\d3d8.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
