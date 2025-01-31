@@ -28,6 +28,8 @@
     <ClCompile Include="src\dependencies\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\menu\menu.cpp" />
     <ClCompile Include="src\hooks\backend\vulkan\hook_vulkan.cpp" />
+    <ClCompile Include="src\dependencies\imgui\imgui_impl_dx8.cpp" />
+    <ClCompile Include="src\hooks\backend\dx8\hook_directx8.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\console\console.hpp" />
@@ -62,5 +64,13 @@
     <ClInclude Include="src\backend.hpp" />
     <ClInclude Include="src\menu\menu.hpp" />
     <ClInclude Include="src\hooks\backend\vulkan\hook_vulkan.hpp" />
+    <ClInclude Include="src\dependencies\imgui\imgui_impl_dx8.h" />
+    <ClInclude Include="src\hooks\backend\dx8\hook_directx8.hpp" />
+    <ClInclude Include="src\dependencies\detours\detours.h" />
+    <ClInclude Include="src\dependencies\detours\detver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\dependencies\DirectX8\Lib\d3d8.lib" />
+    <Library Include="src\dependencies\detours\detours.lib" />
   </ItemGroup>
 </Project>

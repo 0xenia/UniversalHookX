@@ -133,6 +133,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -189,6 +190,7 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">IMGUI_DISABLE_WIN32_DEFAULT_IME_FUNCTIONS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">IMGUI_DISABLE_WIN32_DEFAULT_IME_FUNCTIONS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="src\dependencies\imgui\imgui_impl_dx8.cpp" />
     <ClCompile Include="src\dependencies\imgui\imgui_impl_dx9.cpp" />
     <ClCompile Include="src\dependencies\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\dependencies\imgui\imgui_impl_win32.cpp" />
@@ -207,6 +209,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="src\hooks\backend\dx8\hook_directx8.cpp" />
     <ClCompile Include="src\hooks\backend\dx9\hook_directx9.cpp" />
     <ClCompile Include="src\hooks\backend\dx10\hook_directx10.cpp" />
     <ClCompile Include="src\hooks\backend\opengl\hook_opengl.cpp" />
@@ -218,6 +221,8 @@
   <ItemGroup>
     <ClInclude Include="src\backend.hpp" />
     <ClInclude Include="src\console\console.hpp" />
+    <ClInclude Include="src\dependencies\detours\detours.h" />
+    <ClInclude Include="src\dependencies\detours\detver.h" />
     <ClInclude Include="src\dependencies\imgui\imconfig.h" />
     <ClInclude Include="src\dependencies\imgui\imgui.h" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_dx10.h" />
@@ -228,6 +233,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="src\dependencies\imgui\imgui_impl_dx8.h" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_dx9.h" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_opengl3.h" />
     <ClInclude Include="src\dependencies\imgui\imgui_impl_opengl3_loader.h" />
@@ -246,6 +252,7 @@
     <ClInclude Include="src\dependencies\minhook\trampoline.h" />
     <ClInclude Include="src\hooks\backend\dx11\hook_directx11.hpp" />
     <ClInclude Include="src\hooks\backend\dx12\hook_directx12.hpp" />
+    <ClInclude Include="src\hooks\backend\dx8\hook_directx8.hpp" />
     <ClInclude Include="src\hooks\backend\dx9\hook_directx9.hpp" />
     <ClInclude Include="src\hooks\backend\dx10\hook_directx10.hpp" />
     <ClInclude Include="src\hooks\backend\opengl\hook_opengl.hpp" />
@@ -253,6 +260,10 @@
     <ClInclude Include="src\hooks\hooks.hpp" />
     <ClInclude Include="src\menu\menu.hpp" />
     <ClInclude Include="src\utils\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\dependencies\detours\detours.lib" />
+    <Library Include="src\dependencies\DirectX8\Lib\d3d8.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

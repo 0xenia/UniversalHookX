@@ -9,6 +9,7 @@ You must do this or the DLL won't know what to hook or how to hook. [What is eRe
 The purpose of this library is to show how to hook different backends to display ImGui, the code should be easy to understand as I tried to make everything seem almost the same, see [backends folder](https://github.com/bruhmoment21/UniversalHookX/tree/main/UniversalHookX/src/hooks/backend).
 
 ## Supported Backends
+- [x] DirectX8
 - [x] DirectX9 + DirectX9Ex
 - [x] DirectX10
 - [x] DirectX11

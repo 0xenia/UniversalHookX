@@ -2,7 +2,7 @@
 
 enum RenderingBackend_t {
 	NONE = 0,
-
+        DIRECTX8,
 	DIRECTX9,
 	DIRECTX10,
 	DIRECTX11,
